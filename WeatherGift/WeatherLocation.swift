@@ -14,9 +14,12 @@ class WeatherLocation {
     var name = ""
     var coordinates = ""
     var currentTemp = "--"
+    var currentSummary = ""
+    var currentIcon = ""
     
     func getWeather(completed: @escaping () -> ()) {
         let weatherURL = urlBase + urlAPIKey + coordinates
+        print("*****\(weatherURL)")
         
         Alamofire.request(weatherURL).responseJSON { response in
             switch response.result {
@@ -27,6 +30,16 @@ class WeatherLocation {
                     self.currentTemp = roundedTemp + "°"
                 } else {
                     print("Could not return a temperature")
+                }
+                if let summary = json["daily"]["summary"].string {
+                    self.currentSummary = summary
+                } else {
+                    print("Could not return a summary")
+                }
+                if let icon = json["currently"]["icon"].string {
+                    self.currentIcon = icon
+                } else {
+                    print("Could not return an icon")
                 }
             case .failure(let error):
                 print(error)
