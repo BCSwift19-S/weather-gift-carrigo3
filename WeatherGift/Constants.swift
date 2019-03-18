@@ -1,5 +1,5 @@
 //
-//  WeatherLocation.swift
+//  Constants.swift
 //  WeatherGift
 //
 //  Created by Cameron Arrigo on 3/18/19.
@@ -8,13 +8,5 @@
 
 import Foundation
 
-class WeatherLocation {
-    var name = ""
-    var coordinates = ""
-    
-    func getWeather() {
-        
-    }
-}
-
-
+let urlBase = "https://api.darksky.net/forecast/"
+let urlAPIKEy = "5eeaa099b62e242e25fc49a41a5dbebf"
