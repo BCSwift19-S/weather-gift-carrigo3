@@ -15,7 +15,7 @@ class ListVC: UIViewController {
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
-    var locationsArray = [String]()
+    var locationsArray = [WeatherLocation]()
     var currentPage = 0
 
     override func viewDidLoad() {
@@ -60,7 +60,7 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
-        cell.textLabel?.text = locationsArray[indexPath.row]
+        cell.textLabel?.text = locationsArray[indexPath.row].name
         return cell
     }
     
@@ -93,7 +93,12 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
     
     func updateTable(place: GMSPlace){
         let newIndexPath = IndexPath(row: locationsArray.count, section: 0)
-        locationsArray.append(place.name!)
+        var newWeatherLocation = WeatherLocation()
+        newWeatherLocation.name = place.name!
+        let latitude = place.coordinate.latitude
+        let longitude = place.coordinate.longitude
+        newWeatherLocation.coordinates = "\(latitude), \(longitude)"
+        locationsArray.append(newWeatherLocation)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
 }
