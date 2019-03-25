@@ -72,7 +72,6 @@ class WeatherLocation {
                     let dailySummary = json["daily"]["data"][day]["summary"].stringValue
                     let newDailyForecast = DailyForecast(dailyMaxTemp: maxTemp, dailyMinTemp: minTemp, dailyDate: dateValue, dailySummary: dailySummary, dailyIcon: icon)
                     self.dailyForecastArray.append(newDailyForecast)
-                    print("***** newDailyForecast = \(newDailyForecast)")
                 }
             case .failure(let error):
                 print(error)
