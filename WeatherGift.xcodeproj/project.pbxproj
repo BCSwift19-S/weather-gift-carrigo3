@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E0A6797223F4F9E0076B2C4 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A6796223F4F9E0076B2C4 /* WeatherLocation.swift */; };
+		8E0A6797223F4F9E0076B2C4 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A6796223F4F9E0076B2C4 /* WeatherDetail.swift */; };
 		8E0A6799223F64800076B2C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A6798223F64800076B2C4 /* Constants.swift */; };
 		8E0A679D22489CA00076B2C4 /* DayWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A679C22489CA00076B2C4 /* DayWeatherCell.swift */; };
 		8E0A679F2248AA210076B2C4 /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A679E2248AA210076B2C4 /* TimeInterval+format.swift */; };
 		8E0A67A122493FED0076B2C4 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A67A022493FED0076B2C4 /* HourlyWeatherCell.swift */; };
+		8E0A67A32249482A0076B2C4 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A67A22249482A0076B2C4 /* WeatherLocation.swift */; };
 		8E5FBFF72235AFC600FA3B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5FBFF62235AFC600FA3B1B /* AppDelegate.swift */; };
 		8E5FBFFC2235AFC600FA3B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FBFFA2235AFC600FA3B1B /* Main.storyboard */; };
 		8E5FBFFE2235AFC800FA3B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5FBFFD2235AFC800FA3B1B /* Assets.xcassets */; };
@@ -24,11 +25,12 @@
 
 /* Begin PBXFileReference section */
 		2761D59A73B4A5545310516B /* Pods-WeatherGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.debug.xcconfig"; path = "Target Support Files/Pods-WeatherGift/Pods-WeatherGift.debug.xcconfig"; sourceTree = "<group>"; };
-		8E0A6796223F4F9E0076B2C4 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
+		8E0A6796223F4F9E0076B2C4 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		8E0A6798223F64800076B2C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8E0A679C22489CA00076B2C4 /* DayWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherCell.swift; sourceTree = "<group>"; };
 		8E0A679E2248AA210076B2C4 /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
 		8E0A67A022493FED0076B2C4 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
+		8E0A67A22249482A0076B2C4 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		8E5FBFF32235AFC600FA3B1B /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5FBFF62235AFC600FA3B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E5FBFFB2235AFC600FA3B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,13 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				8E5FBFF62235AFC600FA3B1B /* AppDelegate.swift */,
-				8E0A6796223F4F9E0076B2C4 /* WeatherLocation.swift */,
+				8E0A67A22249482A0076B2C4 /* WeatherLocation.swift */,
+				8E0A6796223F4F9E0076B2C4 /* WeatherDetail.swift */,
 				8E5FC00C2235C87300FA3B1B /* PageVC.swift */,
+				8E5FC00A2235C4AD00FA3B1B /* ListVC.swift */,
 				8E5FC0082235B7E600FA3B1B /* DetailVC.swift */,
 				8E0A679C22489CA00076B2C4 /* DayWeatherCell.swift */,
 				8E0A67A022493FED0076B2C4 /* HourlyWeatherCell.swift */,
 				8E0A679E2248AA210076B2C4 /* TimeInterval+format.swift */,
-				8E5FC00A2235C4AD00FA3B1B /* ListVC.swift */,
 				8E0A6798223F64800076B2C4 /* Constants.swift */,
 				8E5FBFFA2235AFC600FA3B1B /* Main.storyboard */,
 				8E5FBFFD2235AFC800FA3B1B /* Assets.xcassets */,
@@ -256,9 +259,10 @@
 			files = (
 				8E0A679D22489CA00076B2C4 /* DayWeatherCell.swift in Sources */,
 				8E0A67A122493FED0076B2C4 /* HourlyWeatherCell.swift in Sources */,
-				8E0A6797223F4F9E0076B2C4 /* WeatherLocation.swift in Sources */,
+				8E0A6797223F4F9E0076B2C4 /* WeatherDetail.swift in Sources */,
 				8E5FC00B2235C4AD00FA3B1B /* ListVC.swift in Sources */,
 				8E5FC00D2235C87300FA3B1B /* PageVC.swift in Sources */,
+				8E0A67A32249482A0076B2C4 /* WeatherLocation.swift in Sources */,
 				8E0A679F2248AA210076B2C4 /* TimeInterval+format.swift in Sources */,
 				8E5FBFF72235AFC600FA3B1B /* AppDelegate.swift in Sources */,
 				8E5FC0092235B7E700FA3B1B /* DetailVC.swift in Sources */,
